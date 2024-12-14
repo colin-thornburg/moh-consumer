@@ -1,0 +1,36 @@
+version: 1
+models:
+- name: mart_policy_renewal_metrics
+  description: this model calculates metrics related to policy renewals, including
+    eligibility for renewal, projected renewal amounts, and the next renewal date.
+    it combines policy history with renewal criteria to provide insights into policy
+    tenures and renewal rates.
+  columns:
+  - name: policy_id
+    description: unique identifier for each policy.
+    data_tests:
+      - unique
+      - not_null
+  - name: policy_type
+    description: type of the policy, used to determine renewal criteria.
+    data_tests:
+      - not_null
+  - name: customer_name
+    description: name of the customer holding the policy.
+  - name: state
+    description: state where the policy is registered.
+  - name: first_policy_date
+    description: the date when the policy was first issued.
+  - name: tenure_months
+    description: number of months the policy has been active.
+  - name: premium_amount
+    description: current premium amount for the policy.
+  - name: renewal_rate_percentage
+    description: percentage rate at which the policy is eligible for renewal.
+  - name: eligible_for_renewal
+    description: indicates whether the policy meets the criteria for renewal.
+  - name: next_renewal_date
+    description: the next scheduled date for policy renewal.
+  - name: projected_renewal_amount
+    description: estimated amount for the policy renewal based on the current premium
+      and renewal rate.
