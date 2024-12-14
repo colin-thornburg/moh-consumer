@@ -1,0 +1,4 @@
+policy_type,renewal_rate_percentage,min_tenure_months
+TERM,95.5,12
+WHOLE,98.2,24
+UNIVERSAL,97.8,18
